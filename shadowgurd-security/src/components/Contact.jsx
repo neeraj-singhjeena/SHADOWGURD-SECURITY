@@ -20,15 +20,16 @@ function Contact() {
               <h4 className="fw-bold mb-4">Contact Information</h4>
 
               <p className="contact-item">
-                📞 <strong>Phone:</strong> 9815723616
+                📞 <strong>Phone:</strong> +17788636047
               </p>
 
               <p className="contact-item">
-                ✉️ <strong>Email:</strong> support@shadowgurdsecurity.com
+                ✉️ <strong>Email:</strong> shadowguardinc@outlook.com
               </p>
 
               <p className="contact-item">
-                📍 <strong>Address:</strong> India
+                📍 <strong>Address:</strong> 45351 creekside drive Chilliwack,
+                BC Canada, V2P 7S4
               </p>
 
               <p className="text-muted mt-3">
@@ -95,7 +96,7 @@ function Contact() {
         <p className="mt-2 animate-fade delay-1">
           Contact us today to discuss your security requirements.
         </p>
-        <a href="https://wa.me/919815723616" className="btn btn-danger mt-3">
+        <a href="https://wa.me/+17788636047" className="btn btn-danger mt-3">
           Chat on WhatsApp
         </a>
       </section>

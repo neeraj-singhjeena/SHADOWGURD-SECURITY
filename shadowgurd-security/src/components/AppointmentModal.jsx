@@ -15,7 +15,7 @@ function AppointmentModal() {
       `Preferred Date: ${date}%0A` +
       `Message: ${message}`;
 
-    window.open(`https://wa.me/919815723616?text=${text}`, "_blank");
+    window.open(`https://wa.me/+17788636047?text=${text}`, "_blank");
   };
 
   return (
