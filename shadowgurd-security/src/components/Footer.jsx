@@ -137,7 +137,7 @@ function Footer() {
         >
           <p style={{ margin: 0 }}>
             © 2026{" "}
-            <strong style={{ color: accent }}>SHADOWGURD SECURITY</strong>. All
+            <strong style={{ color: accent }}>SHADOWGUARD SECURITY</strong>. All
             Rights Reserved.
           </p>
         </div>
