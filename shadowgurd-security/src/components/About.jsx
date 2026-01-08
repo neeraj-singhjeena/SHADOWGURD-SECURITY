@@ -17,7 +17,7 @@ function About() {
             Who We Are
           </h1>
           <p className="mt-3" style={{ color: accent, fontWeight: 500 }}>
-            Dedicated to Your Safety. Trusted for Professional Protection.
+            Dedicated to Your Safety. Trusted for professional Protection.
           </p>
         </div>
       </section>
