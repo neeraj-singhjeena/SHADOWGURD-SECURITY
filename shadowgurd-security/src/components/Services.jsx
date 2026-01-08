@@ -141,7 +141,6 @@ function Services() {
                   transition: "all 0.35s ease",
                   alignSelf: "flex-start",
                 }}
-                // desktop hover only
                 onMouseEnter={(e) => {
                   if (window.innerWidth > 768) {
                     e.currentTarget.style.transform = "translateY(-6px)";
