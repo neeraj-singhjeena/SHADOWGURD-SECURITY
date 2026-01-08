@@ -1,39 +1,78 @@
 function About() {
   return (
     <>
-      {/* ===== HERO HEADER (NO IMAGE) ===== */}
-      <section className="about-hero text-white text-center">
+      {/* ===== HERO HEADER ===== */}
+      <section
+        className="text-white text-center"
+        style={{
+          background: "linear-gradient(180deg, #0b0f14, #111827)",
+          padding: "100px 15px",
+        }}
+      >
         <div className="container">
-          <h1 className="fw-bold animate-fade">Who We Are</h1>
-          <p className="mt-3 animate-fade delay-1">
+          <h1 className="fw-bold" style={{ letterSpacing: "1px" }}>
+            Who We Are
+          </h1>
+          <p className="mt-3" style={{ color: "#ff4d1c", fontWeight: 500 }}>
             Dedicated to Your Safety. Trusted for Professional Protection.
           </p>
         </div>
       </section>
 
-      {/* ===== OUR STORY ===== */}
+      {/* ===== WHY WE EXIST (ONLY SECTION, OUR STORY REMOVED) ===== */}
       <section className="container py-5">
-        <div className="row g-4 align-items-center">
-          <div className="col-md-6 animate-up">
-            <h2 className="fw-bold">Our Story</h2>
-            <p className="text-muted mt-3">
-              <strong>SHADOWGURD SECURITY</strong> is a trusted provider of
-              professional security services with years of experience protecting
-              people, property, and assets.
-            </p>
-            <p className="text-muted">
-              We are driven by integrity, discipline, and a strong commitment to
-              client safety—delivering peace of mind through reliable security
-              solutions.
-            </p>
-          </div>
+        <div className="row justify-content-center">
+          <div className="col-lg-10">
+            <div
+              style={{
+                background: "#111827",
+                color: "#e5e7eb",
+                padding: "40px",
+                borderLeft: "5px solid #ff4d1c",
+                borderRadius: "10px",
+                boxShadow: "0 20px 40px rgba(0,0,0,0.35)",
+              }}
+            >
+              <h3 className="fw-bold mb-3" style={{ color: "#ff4d1c" }}>
+                Why We Exist
+              </h3>
 
-          <div className="col-md-6 animate-up delay-1">
-            <div className="about-card">
-              <h5 className="fw-semibold mb-2">Why We Exist</h5>
-              <p className="text-muted mb-0">
+              <p
+                style={{
+                  fontSize: "17px",
+                  lineHeight: "1.8",
+                  color: "#d1d5db",
+                }}
+              >
                 To provide dependable, responsive, and professional security
-                services that protect what matters most—24/7.
+                services that protect what matters most 24/7.
+              </p>
+
+              <p
+                style={{
+                  fontSize: "16px",
+                  lineHeight: "1.8",
+                  color: "#9ca3af",
+                }}
+              >
+                <strong style={{ color: "#ffffff" }}>
+                  SHADOWGURD SECURITY
+                </strong>{" "}
+                is a trusted provider of professional security services with
+                years of experience protecting people, property, and assets.
+              </p>
+
+              <p
+                style={{
+                  fontSize: "16px",
+                  lineHeight: "1.8",
+                  color: "#9ca3af",
+                  marginBottom: 0,
+                }}
+              >
+                We are driven by integrity, discipline, and a strong commitment
+                to client safety delivering peace of mind through reliable
+                security solutions.
               </p>
             </div>
           </div>
@@ -41,111 +80,115 @@ function About() {
       </section>
 
       {/* ===== MISSION / VISION / VALUES ===== */}
-      <section className="bg-light py-5">
+      <section className="py-5" style={{ backgroundColor: "#0b0f14" }}>
         <div className="container">
           <div className="row g-4 text-center">
-            <div className="col-md-4 animate-up">
-              <div className="about-box">
-                <h5 className="fw-bold">🎯 Our Mission</h5>
-                <p className="text-muted">
-                  Deliver reliable, professional, and responsive security
-                  services tailored to every client’s needs.
-                </p>
+            {[
+              {
+                title: " Our Mission",
+                text: "Deliver reliable, professional, and responsive security services tailored to every client’s needs.",
+              },
+              {
+                title: " Our Vision",
+                text: "To become a trusted leader in modern security solutions through excellence and innovation.",
+              },
+              {
+                title: " Our Values",
+                text: "Integrity, discipline, professionalism, and client-first commitment.",
+              },
+            ].map((item, i) => (
+              <div className="col-md-4" key={i}>
+                <div
+                  style={{
+                    background: "#111827",
+                    padding: "30px",
+                    borderRadius: "10px",
+                    height: "100%",
+                    boxShadow: "0 15px 30px rgba(0,0,0,0.35)",
+                  }}
+                >
+                  <h5 className="fw-bold" style={{ color: "#ff4d1c" }}>
+                    {item.title}
+                  </h5>
+                  <p className="mt-3" style={{ color: "#9ca3af" }}>
+                    {item.text}
+                  </p>
+                </div>
               </div>
-            </div>
-
-            <div className="col-md-4 animate-up delay-1">
-              <div className="about-box">
-                <h5 className="fw-bold">👁️ Our Vision</h5>
-                <p className="text-muted">
-                  To become a trusted leader in modern security solutions
-                  through excellence and innovation.
-                </p>
-              </div>
-            </div>
-
-            <div className="col-md-4 animate-up delay-2">
-              <div className="about-box">
-                <h5 className="fw-bold">🤝 Our Values</h5>
-                <p className="text-muted">
-                  Integrity, discipline, professionalism, and client-first
-                  commitment.
-                </p>
-              </div>
-            </div>
+            ))}
           </div>
         </div>
       </section>
 
       {/* ===== OUR TEAM ===== */}
       <section className="container py-5">
-        <h2 className="fw-bold text-center mb-3 animate-fade">
-          Our Professional Team
-        </h2>
-        <p className="text-center text-muted mb-5 animate-fade delay-1">
+        <h2 className="fw-bold text-center mb-3">Our Professional Team</h2>
+        <p className="text-center text-muted mb-5">
           Trained, verified, disciplined professionals you can trust.
         </p>
 
         <div className="row g-4 text-center">
-          <div className="col-md-4 animate-up">
-            <div className="team-card">
-              <h5>✔ Background Verified</h5>
-              <p className="text-muted">
-                Strict background checks and verification for all personnel.
-              </p>
+          {[
+            "Background Verified",
+            "Professionally Trained",
+            "Reliable & Responsible",
+          ].map((text, i) => (
+            <div className="col-md-4" key={i}>
+              <div
+                style={{
+                  border: "1px solid #e5e7eb",
+                  padding: "25px",
+                  borderRadius: "10px",
+                  transition: "all 0.3s ease",
+                }}
+              >
+                <h5 className="fw-semibold">✔ {text}</h5>
+                <p className="text-muted mt-2">
+                  High standards maintained across all operations.
+                </p>
+              </div>
             </div>
-          </div>
-
-          <div className="col-md-4 animate-up delay-1">
-            <div className="team-card">
-              <h5>✔ Professionally Trained</h5>
-              <p className="text-muted">
-                Continuous training ensures alertness and readiness.
-              </p>
-            </div>
-          </div>
-
-          <div className="col-md-4 animate-up delay-2">
-            <div className="team-card">
-              <h5>✔ Reliable & Responsible</h5>
-              <p className="text-muted">
-                We operate with accountability and professionalism.
-              </p>
-            </div>
-          </div>
+          ))}
         </div>
       </section>
 
       {/* ===== TRUST STATS ===== */}
-      <section className="trust-section text-white">
+      <section
+        className="text-white py-5"
+        style={{
+          background: "linear-gradient(180deg, #111827, #0b0f14)",
+        }}
+      >
         <div className="container">
           <div className="row text-center g-4">
-            <div className="col-md-3 animate-fade">
-              <h3 className="fw-bold">10+</h3>
-              <p>Years Experience</p>
-            </div>
-            <div className="col-md-3 animate-fade delay-1">
-              <h3 className="fw-bold">500+</h3>
-              <p>Clients Protected</p>
-            </div>
-            <div className="col-md-3 animate-fade delay-2">
-              <h3 className="fw-bold">24/7</h3>
-              <p>Availability</p>
-            </div>
-            <div className="col-md-3 animate-fade delay-3">
-              <h3 className="fw-bold">100%</h3>
-              <p>Client Satisfaction</p>
-            </div>
+            {[
+              ["2", "Years Experience"],
+              ["50", "Clients Protected"],
+              ["24/7", "Availability"],
+              ["100%", "Client Satisfaction"],
+            ].map((item, i) => (
+              <div className="col-md-3" key={i}>
+                <h3 className="fw-bold" style={{ color: "#ff4d1c" }}>
+                  {item[0]}
+                </h3>
+                <p>{item[1]}</p>
+              </div>
+            ))}
           </div>
         </div>
       </section>
 
       {/* ===== CTA ===== */}
       <section className="py-5 text-center bg-dark text-white">
-        <h2 className="fw-bold animate-fade">
-          Let Us Protect What Matters Most to You
-        </h2>
-        <a href="#contact" className="btn btn-danger mt-3 px-4">
+        <h2 className="fw-bold">Let Us Protect What Matters Most to You</h2>
+        <a
+          href="#contact"
+          className="btn mt-3 px-4"
+          style={{
+            backgroundColor: "#ff4d1c",
+            color: "#fff",
+          }}
+        >
           Contact Us Today
         </a>
       </section>

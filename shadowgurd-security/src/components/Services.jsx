@@ -7,6 +7,11 @@ function Services() {
     setOpenId(openId === id ? null : id);
   };
 
+  const accent = "#ff4d1c";
+  const cardBg = "#111827";
+  const muted = "#6b7280";
+  const text = "#e5e7eb";
+
   const services = [
     {
       id: 1,
@@ -102,37 +107,63 @@ function Services() {
   ];
 
   return (
-    <section id="services" className="container py-5">
-      <div className="text-center mb-5">
-        <h2 className="fw-bold">Our Security Services</h2>
-        <p className="text-muted">
-          Professional security solutions designed for complete protection.
-        </p>
-      </div>
+    <section
+      id="services"
+      style={{ backgroundColor: "#ffffff", padding: "80px 0" }}
+    >
+      <div className="container">
+        <div className="text-center mb-5">
+          <h2 className="fw-bold">Our Security Services</h2>
+          <p className="text-muted">
+            Professional security solutions designed for complete protection.
+          </p>
+        </div>
 
-      <div className="row g-4">
-        {services.map((s) => (
-          <div className="col-sm-6 col-lg-4" key={s.id}>
-            <div className={`service-box ${openId === s.id ? "active" : ""}`}>
-              <div className="service-icon">{s.icon}</div>
-
-              <h5 className="fw-semibold">{s.title}</h5>
-              <p className="text-muted">{s.short}</p>
-
-              {/* EXPANDED CONTENT */}
-              <div className={`service-more ${openId === s.id ? "show" : ""}`}>
-                <p>{s.more}</p>
-              </div>
-
-              <button
-                className="service-toggle"
-                onClick={() => toggleBox(s.id)}
+        <div className="row g-4">
+          {services.map((s) => (
+            <div className="col-sm-6 col-lg-4" key={s.id}>
+              <div
+                style={{
+                  background: cardBg,
+                  padding: "30px",
+                  borderRadius: "10px",
+                  height: "100%",
+                  border:
+                    openId === s.id
+                      ? `1px solid ${accent}`
+                      : "1px solid #1f2937",
+                  transition: "all 0.3s ease",
+                }}
               >
-                {openId === s.id ? "Learn Less ↑" : "Learn More →"}
-              </button>
+                <div style={{ fontSize: "34px", marginBottom: "10px" }}>
+                  {s.icon}
+                </div>
+
+                <h5 className="fw-semibold" style={{ color: accent }}>
+                  {s.title}
+                </h5>
+
+                <p style={{ color: muted }}>{s.short}</p>
+
+                {openId === s.id && <p style={{ color: text }}>{s.more}</p>}
+
+                <button
+                  onClick={() => toggleBox(s.id)}
+                  style={{
+                    background: "none",
+                    border: "none",
+                    color: accent,
+                    fontWeight: 500,
+                    marginTop: "10px",
+                    cursor: "pointer",
+                  }}
+                >
+                  {openId === s.id ? "Learn Less ↑" : "Learn More →"}
+                </button>
+              </div>
             </div>
-          </div>
-        ))}
+          ))}
+        </div>
       </div>
     </section>
   );
