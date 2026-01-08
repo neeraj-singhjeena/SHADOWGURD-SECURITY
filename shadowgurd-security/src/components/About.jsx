@@ -64,7 +64,7 @@ function About() {
                 }}
               >
                 <strong style={{ color: "#ffffff" }}>
-                  SHADOWGURD SECURITY
+                  SHADOWGUARD SECURITY
                 </strong>{" "}
                 is a trusted provider of professional security services with
                 years of experience protecting people, property, and assets. We
