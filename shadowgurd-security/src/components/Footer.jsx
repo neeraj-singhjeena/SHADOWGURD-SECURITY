@@ -25,7 +25,7 @@ function Footer() {
           {/* COMPANY INFO */}
           <div className="col-md-4">
             <h5 style={{ color: accent, fontWeight: 700 }}>
-              SHADOWGURD SECURITY
+              SHADOWGUARD SECURITY
             </h5>
             <p style={{ color: muted, marginTop: "15px" }}>
               We are a trusted security service provider delivering reliable,
