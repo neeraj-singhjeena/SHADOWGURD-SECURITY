@@ -8,9 +8,8 @@ function Services() {
   };
 
   const accent = "#ff4d1c";
-  const cardBg = "#111827";
   const muted = "#6b7280";
-  const text = "#e5e7eb";
+  const dark = "#111827";
 
   const services = [
     {
@@ -107,10 +106,7 @@ function Services() {
   ];
 
   return (
-    <section
-      id="services"
-      style={{ backgroundColor: "#ffffff", padding: "80px 0" }}
-    >
+    <section id="services" style={{ background: "#ffffff", padding: "80px 0" }}>
       <div className="container">
         <div className="text-center mb-5">
           <h2 className="fw-bold">Our Security Services</h2>
@@ -119,23 +115,46 @@ function Services() {
           </p>
         </div>
 
-        <div className="row g-4">
+        <div className="row g-4 align-items-start">
           {services.map((s) => (
-            <div className="col-sm-6 col-lg-4" key={s.id}>
+            <div className="col-sm-6 col-lg-4 d-flex" key={s.id}>
               <div
                 style={{
-                  background: cardBg,
+                  background: "#ffffff",
                   padding: "30px",
-                  borderRadius: "10px",
-                  height: "100%",
+                  borderRadius: "14px",
+                  width: "100%",
                   border:
                     openId === s.id
-                      ? `1px solid ${accent}`
-                      : "1px solid #1f2937",
-                  transition: "all 0.3s ease",
+                      ? `2px solid ${accent}`
+                      : "1px solid #e5e7eb",
+                  borderTop:
+                    openId === s.id
+                      ? `4px solid ${accent}`
+                      : "4px solid transparent",
+                  boxShadow:
+                    openId === s.id
+                      ? "0 25px 45px rgba(0,0,0,0.25)"
+                      : "0 12px 25px rgba(0,0,0,0.12)",
+                  transform:
+                    openId === s.id ? "translateY(-8px)" : "translateY(0)",
+                  transition: "all 0.35s ease",
+                  alignSelf: "flex-start",
+                }}
+                onMouseEnter={(e) => {
+                  e.currentTarget.style.transform = "translateY(-6px)";
+                  e.currentTarget.style.boxShadow =
+                    "0 25px 45px rgba(0,0,0,0.25)";
+                }}
+                onMouseLeave={(e) => {
+                  if (openId !== s.id) {
+                    e.currentTarget.style.transform = "translateY(0)";
+                    e.currentTarget.style.boxShadow =
+                      "0 12px 25px rgba(0,0,0,0.12)";
+                  }
                 }}
               >
-                <div style={{ fontSize: "34px", marginBottom: "10px" }}>
+                <div style={{ fontSize: "36px", marginBottom: "12px" }}>
                   {s.icon}
                 </div>
 
@@ -145,7 +164,17 @@ function Services() {
 
                 <p style={{ color: muted }}>{s.short}</p>
 
-                {openId === s.id && <p style={{ color: text }}>{s.more}</p>}
+                {openId === s.id && (
+                  <p
+                    style={{
+                      color: dark,
+                      marginTop: "10px",
+                      lineHeight: "1.7",
+                    }}
+                  >
+                    {s.more}
+                  </p>
+                )}
 
                 <button
                   onClick={() => toggleBox(s.id)}
@@ -153,8 +182,8 @@ function Services() {
                     background: "none",
                     border: "none",
                     color: accent,
-                    fontWeight: 500,
-                    marginTop: "10px",
+                    fontWeight: 600,
+                    marginTop: "12px",
                     cursor: "pointer",
                   }}
                 >

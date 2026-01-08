@@ -10,21 +10,18 @@ function Contact() {
         className="text-white text-center"
         style={{
           background: `linear-gradient(180deg, ${darkBg}, ${darkCard})`,
-          padding: "100px 15px",
+          padding: "50px 15px",
         }}
       >
         <div className="container">
           <h1 className="fw-bold">Contact Us</h1>
-          <p className="mt-3" style={{ color: accent, fontWeight: 500 }}>
-            Get in touch with SHADOWGURD SECURITY — We’re available 24/7
-          </p>
         </div>
       </section>
 
       {/* ===== CONTACT INFO + FORM ===== */}
       <section className="container py-5">
         <div className="row g-4">
-          {/* CONTACT INFO */}
+          {/* CONTACT INFO (DARK – SAME) */}
           <div className="col-md-5">
             <div
               style={{
@@ -42,11 +39,9 @@ function Contact() {
               <p>
                 📞 <strong>Phone:</strong> +17788636047
               </p>
-
               <p>
                 ✉️ <strong>Email:</strong> shadowguardinc@outlook.com
               </p>
-
               <p>
                 📍 <strong>Address:</strong> 45351 Creekside Drive, Chilliwack,
                 BC Canada, V2P 7S4
@@ -59,13 +54,14 @@ function Contact() {
             </div>
           </div>
 
-          {/* CONTACT FORM */}
+          {/* CONTACT FORM (WHITE CARD) */}
           <div className="col-md-7">
             <div
               style={{
-                background: darkCard,
-                padding: "30px",
-                borderRadius: "8px",
+                background: "#ffffff",
+                padding: "35px",
+                borderRadius: "10px",
+                boxShadow: "0 18px 40px rgba(0,0,0,0.12)",
               }}
             >
               <h4 className="fw-bold mb-4" style={{ color: accent }}>
@@ -84,9 +80,9 @@ function Contact() {
                       className="form-control"
                       placeholder={field.placeholder}
                       style={{
-                        background: "#0b0f14",
-                        border: "1px solid #374151",
-                        color: "#e5e7eb",
+                        background: "#ffffff",
+                        border: "1px solid #d1d5db",
+                        padding: "12px",
                       }}
                       required
                     />
@@ -99,9 +95,9 @@ function Contact() {
                     className="form-control"
                     placeholder="Your Message"
                     style={{
-                      background: "#0b0f14",
-                      border: "1px solid #374151",
-                      color: "#e5e7eb",
+                      background: "#ffffff",
+                      border: "1px solid #d1d5db",
+                      padding: "12px",
                     }}
                     required
                   ></textarea>
