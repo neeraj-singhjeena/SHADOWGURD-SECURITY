@@ -17,98 +17,98 @@ function Services() {
       title: "Residential Security",
       icon: "🏠",
       short: "Protecting homes, apartments, and gated communities.",
-      more: "Our residential security services focus on complete household safety. This includes controlled access, visitor verification, regular patrols, CCTV monitoring, and ensuring a safe environment for residents and families at all times.",
+      more: "Our residential security services focus on complete household safety including access control, patrols, CCTV monitoring, and resident protection.",
     },
     {
       id: 2,
       title: "Commercial Security",
       icon: "🏢",
       short: "Security for offices, warehouses, and retail spaces.",
-      more: "We provide professional commercial security to protect offices and business premises. Our guards help prevent theft, ensure employee safety, manage access points, and safeguard valuable company assets.",
+      more: "We protect business premises by preventing theft, managing access points, and ensuring employee and asset safety.",
     },
     {
       id: 3,
       title: "Construction Site Security",
       icon: "🚧",
       short: "Prevent theft, vandalism, and unauthorized access.",
-      more: "Construction sites are vulnerable to theft and damage. Our services include night patrols, material protection, controlled entry points, and on-site monitoring to reduce losses.",
+      more: "Our guards protect materials, equipment, and sites with night patrols and controlled entry.",
     },
     {
       id: 4,
       title: "Mobile Patrol Services",
       icon: "🚓",
       short: "Scheduled and random patrol services.",
-      more: "Our mobile patrol units operate marked and unmarked vehicles to conduct routine and surprise patrols. This ensures visibility, rapid response, and continuous deterrence against security threats.",
+      more: "Marked and unmarked patrol vehicles ensure visibility, deterrence, and rapid response.",
     },
     {
       id: 5,
       title: "Event Security",
       icon: "🎪",
-      short: "Crowd control and entry management for events.",
-      more: "We provide trained event security personnel for concerts, weddings, festivals, and private events. Our team handles crowd control, entry checks, emergency response, and overall event safety.",
+      short: "Crowd control and entry management.",
+      more: "Professional security for concerts, weddings, festivals, and private events.",
     },
     {
       id: 6,
       title: "Access Control & Entry Management",
       icon: "🚪",
       short: "Controlled entry and visitor verification.",
-      more: "Our access control services include ID verification, visitor logs, gate supervision, and restricted access management to ensure only authorized individuals enter the premises.",
+      more: "ID verification, visitor logs, gate supervision, and restricted access management.",
     },
     {
       id: 7,
       title: "Loss Prevention & Retail Security",
       icon: "🛒",
       short: "Reduce theft and inventory loss.",
-      more: "We help retail businesses minimize losses by preventing shoplifting, detecting internal theft, and monitoring customer activity through trained security staff and surveillance systems.",
+      more: "Shoplifting prevention, internal theft control, and surveillance monitoring.",
     },
     {
       id: 8,
       title: "Healthcare Facility Security",
       icon: "🏥",
       short: "Security for hospitals and clinics.",
-      more: "Our healthcare security services focus on patient safety, staff protection, access control, and maintaining a calm and secure environment in hospitals and medical facilities.",
+      more: "Patient safety, staff protection, and calm environment maintenance.",
     },
     {
       id: 9,
       title: "Parking Lot & Traffic Control",
       icon: "🚗",
       short: "Safe traffic flow and parking management.",
-      more: "We manage vehicle movement, parking discipline, and pedestrian safety to ensure smooth traffic flow and reduce accidents in parking areas.",
+      more: "Vehicle control, pedestrian safety, and accident prevention.",
     },
     {
       id: 10,
       title: "24/7 On-Site Security Coverage",
       icon: "🕒",
       short: "Round-the-clock protection services.",
-      more: "Our trained guards provide continuous on-site security coverage, ensuring protection during day and night with constant vigilance.",
+      more: "Day and night guard presence for continuous protection.",
     },
     {
       id: 11,
       title: "Emergency Response & Incident Reporting",
       icon: "🚨",
-      short: "Rapid response and incident documentation.",
-      more: "We ensure quick emergency response, proper incident handling, and detailed reporting while coordinating with authorities when required.",
+      short: "Rapid response and reporting.",
+      more: "Immediate response, incident documentation, and authority coordination.",
     },
     {
       id: 12,
       title: "Fire Watch Security",
       icon: "🔥",
-      short: "Fire hazard monitoring and prevention.",
-      more: "Our fire watch security monitors potential fire hazards, ensures compliance with safety standards, and responds immediately during emergencies.",
+      short: "Fire hazard monitoring.",
+      more: "Fire risk monitoring, compliance support, and emergency readiness.",
     },
     {
       id: 13,
       title: "Surveillance Monitoring & CCTV Observation",
       icon: "📹",
       short: "Real-time surveillance monitoring.",
-      more: "We provide continuous CCTV monitoring and surveillance observation to detect suspicious activities and enhance overall security awareness.",
+      more: "Continuous CCTV observation and threat detection.",
     },
   ];
 
   return (
     <section id="services" style={{ background: "#ffffff", padding: "80px 0" }}>
       <div className="container">
-        <div className="text-center mb-5">
+        <div className="text-center mb-5 px-3">
           <h2 className="fw-bold">Our Security Services</h2>
           <p className="text-muted">
             Professional security solutions designed for complete protection.
@@ -117,12 +117,12 @@ function Services() {
 
         <div className="row g-4 align-items-start">
           {services.map((s) => (
-            <div className="col-sm-6 col-lg-4 d-flex" key={s.id}>
+            <div className="col-12 col-sm-6 col-lg-4 d-flex" key={s.id}>
               <div
                 style={{
                   background: "#ffffff",
-                  padding: "30px",
-                  borderRadius: "14px",
+                  padding: "28px",
+                  borderRadius: "16px",
                   width: "100%",
                   border:
                     openId === s.id
@@ -134,23 +134,26 @@ function Services() {
                       : "4px solid transparent",
                   boxShadow:
                     openId === s.id
-                      ? "0 25px 45px rgba(0,0,0,0.25)"
-                      : "0 12px 25px rgba(0,0,0,0.12)",
+                      ? "0 22px 40px rgba(0,0,0,0.22)"
+                      : "0 10px 22px rgba(0,0,0,0.10)",
                   transform:
-                    openId === s.id ? "translateY(-8px)" : "translateY(0)",
+                    openId === s.id ? "translateY(-6px)" : "translateY(0)",
                   transition: "all 0.35s ease",
                   alignSelf: "flex-start",
                 }}
+                // desktop hover only
                 onMouseEnter={(e) => {
-                  e.currentTarget.style.transform = "translateY(-6px)";
-                  e.currentTarget.style.boxShadow =
-                    "0 25px 45px rgba(0,0,0,0.25)";
+                  if (window.innerWidth > 768) {
+                    e.currentTarget.style.transform = "translateY(-6px)";
+                    e.currentTarget.style.boxShadow =
+                      "0 22px 40px rgba(0,0,0,0.22)";
+                  }
                 }}
                 onMouseLeave={(e) => {
-                  if (openId !== s.id) {
+                  if (window.innerWidth > 768 && openId !== s.id) {
                     e.currentTarget.style.transform = "translateY(0)";
                     e.currentTarget.style.boxShadow =
-                      "0 12px 25px rgba(0,0,0,0.12)";
+                      "0 10px 22px rgba(0,0,0,0.10)";
                   }
                 }}
               >
@@ -185,6 +188,7 @@ function Services() {
                     fontWeight: 600,
                     marginTop: "12px",
                     cursor: "pointer",
+                    padding: 0,
                   }}
                 >
                   {openId === s.id ? "Learn Less ↑" : "Learn More →"}
