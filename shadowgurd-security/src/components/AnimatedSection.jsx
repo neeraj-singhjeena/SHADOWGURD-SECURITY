@@ -9,7 +9,7 @@ function AnimatedSection({ children }) {
       ([entry]) => {
         if (entry.isIntersecting) {
           setShow(true);
-          observer.unobserve(entry.target); // sirf ek baar animate
+          observer.unobserve(entry.target);
         }
       },
       { threshold: 0.2 }
@@ -29,4 +29,4 @@ function AnimatedSection({ children }) {
   );
 }
 
-export default AnimatedSection; // 👈 YE LINE SABSE IMPORTANT
+export default AnimatedSection;
