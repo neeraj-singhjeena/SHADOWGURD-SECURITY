@@ -82,9 +82,9 @@ function App() {
 
       {/* SERVICES SECTION */}
       <section id="services">
-        <AnimatedSection>
-          <Services />
-        </AnimatedSection>
+        {/* <AnimatedSection> */}
+        <Services />
+        {/* </AnimatedSection> */}
       </section>
 
       {/* SECURITY UPGRADE SECTION */}
