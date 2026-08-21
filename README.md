@@ -7,7 +7,7 @@ The project focuses on showcasing how security-focused web applications can be b
 ---
 
 ## 🌐 Live Preview
-🔗 https://shadowguard-security.pages.dev  
+🔗https://81a56f04.shadowgurd-security.pages.dev/
 *(Update this link if hosting changes)*
 
 ---
